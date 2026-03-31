@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 const app = express();
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware basique
 app.use(express.json());
@@ -16,7 +16,7 @@ app.get('/health', (req, res) => {
 
 // Route test
 app.get('/', (req, res) => {
-  res.send('🚀 API CI/CD is running');
+  res.send('hello world');
 });
 
 app.listen(PORT, () => {
